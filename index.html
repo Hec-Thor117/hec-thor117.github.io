@@ -5,14 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hector Garnica</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages. Isn't that cool?</p>
-    <h2>Testing refresh rate</h2>
-    <a href="https://hec-thor117.github.io/High-Card-Low-Card/">View My Awesome Project</a>
-    <a href="https://hec-thor117.github.io/Difelity/">View My Awesome Project</a>
-    <a href="https://hec-thor117.github.io/Guac-Lord/">View My Awesome React Project</a>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+
+    <header class="header" id="home">
+      <h1 class="title">Hector Garnica</h1>
+      <h3 class="subtitle">Do ya like jazz?</h3>
+
+      <!-- Background animation HTML from Codepen -->
+      <!-- Credit: Mary G -->
+      <div class="muzieknootjes">
+        <div class="noot-1">&#9835; &#9833;</div>
+        <div class="noot-2">&#9833;</div>
+        <div class="noot-3">&#9839; &#9834;</div>
+        <div class="noot-4">&#9835; &#9833;</div>
+        <div class="noot-5">&#9834;</div>
+      </div>
+
+      <img
+        class="header-image"
+        src="./Images/hector-pic.jpg"
+        alt="Hector Garnica sitting at a drumset with a big smile on his adorable face."
+      />
+      <p><span class="header-hook">Self-taught developer</span></p>
+    </header>
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+      <h3>About Me</h3>
+      <p>
+        I've had to teach myself how to do just about everything - cooking,
+        music, taxes, etc.
+      </p>
+      <p>
+        <span
+          >But <em>nothing</em> has been as challenging nor rewarding as
+          learning how to code.</span
+        >
+      </p>
+      <p>
+        Since my first "Hello World" back in January 2022, I've discovered a
+        passion for bringing simple, clean designs to life through coding and I
+        hope I show it through these projects.
+      </p>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+
+    <section class="projects" id="projects">
+      <a href="https://hec-thor117.github.io/High-Card-Low-Card/"
+        ><img
+          src="./Images/High Card Low Card.png"
+          alt="link to High Card Low Card Web Game"
+        />
+        <div class="overlay">
+          Inspired by Animal Crossing and made using Vanilla JavaScript. Let's
+          play high card low card!
+        </div>
+      </a>
+
+      <a href="https://hec-thor117.github.io/Difelity/"
+        ><img src="./Images/Difelity.PNG" alt="link to Difelity Home Page" />
+        <div class="overlay">
+          A reimagined homepage for a popular investing website... shh.
+        </div>
+      </a>
+
+      <a href="https://hec-thor117.github.io/Guac-Lord/"
+        ><img src="./Images/Guac Lord.PNG" alt="link to Guac Lord Web Game" />
+        <div class="overlay">
+          A test to determine if you are a Guac Lord or not. Made using React.
+        </div>
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <p>Styled by me - Hector Garnica</p>
+      <p>Hosted by GitHub Pages</p>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>

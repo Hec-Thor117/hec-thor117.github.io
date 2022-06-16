@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ----- Navbar ----- */
+
+.navbar {
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    background-color: #202020;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.navbar li {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    transition: .5s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    color: #55ce3d;
+}
+
+/* ----- Header ----- */
+
+.header {
+    background-color: #202020;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 5rem;
+    margin: 1rem 0 0 0;
+    padding-left: 1.125rem;
+    border-left: 10px solid #55ce3d;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin: 0;
+}
+
+.header-image {
+    border-radius: 50%;
+    width: 400px;
+    min-width: 150px;
+    margin: 3rem;
+}
+
+.header-hook {
+    font-size: 3rem;
+    color: #55ce3d;
+    padding: 3rem;
+    font-weight: 300;
+}
+
+/* ----- About ----- */
+
+.about {
+    font-size: 1.125rem;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10rem 0;
+    background-color: #fff;
+    color: #000;
+    font-weight: 400;
+}
+
+.about h3 {
+    font-size: 2rem;
+    color: #960f8a;
+}
+
+.about span {
+    font-size: 1.5rem;
+}
+
+.about em {
+    color: #55ce3d;
+}
+
+/* ----- Projects ----- */
+
+.projects {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10rem 0;
+    background-color: #202020;
+}
+
+.projects img {
+    height: 200px;
+    width: 400px;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.projects a {
+    border: 5px solid #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: #000;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.projects a:hover .overlay {
+    opacity: 1;
+}
+
+/* ----- Footer ----- */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: #202020;
+}
+
+.footer p {
+    padding-left: 20px;
+}
+
+/* Background animation CSS from Codepen */
+/* Credit: Mary G */
+
+.muzieknootjes {
+    display: block;
+    margin: auto;
+    position: absolute;
+    width: 75%;
+    min-width: 300px;
+    height: 200px;
+    border: 0px solid #000;
+}
+
+.noot-1,
+.noot-2,
+.noot-3,
+.noot-4,
+.noot-5 {
+    position: absolute;
+    animation: notes 2s infinite linear;
+    font-size: 35px;
+    opacity: 0;
+    color: #960f8a;
+}
+
+.noot-1 {
+    top: 0;
+    left: 0;
+    animation-delay: 0.5s;
+}
+
+.noot-2 {
+    top: 200px;
+    left: 200px;
+    animation-delay: 1s;
+}
+
+.noot-3 {
+    top: 90px;
+    left: 75%;
+    animation-delay: 1.5s;
+}
+
+.noot-4 {
+    top: 150px;
+    left: 100%;
+    animation-delay: 2s;
+}
+
+.noot-5 {
+    top: 450px;
+}
+@keyframes notes {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5) translate(50%, -50%);
+    }
+
+    80% {
+        opacity: 0;
+        transform: scale(1.5) translate(100%, -100%);
+    }
+
+    100% {
+        transform: scale(1.5) translate(100%, -100%);
+        opacity: 0;
+    }
+}
+
+@media (max-width:1300px) {
+    .projects {
+        flex-direction: column;  
+        padding: 0;
+    }
+
+    .projects a {
+        margin: 3rem 0;
+    }
+}
+
+@media (max-width:700px) {
+    .title {
+       width: 40%; 
+       margin: 1rem;
+       padding: 1rem;
+    }
+
+    .header-hook {
+        font-size: 2rem;
+    }
+}
